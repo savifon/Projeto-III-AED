@@ -56,12 +56,6 @@ class Cadastro {
 
 		//efetiva cadastro
 		Cadastro novoCadastro = new Cadastro(nome, email, Md5.Hash(senha), telefone);
-		/*Acesso novoAcesso = new Acesso();
-		novoAcesso.addCadastro(novoCadastro);
-
-		//confirma cadastro
-		Console.Clear();
-		Console.WriteLine("\nSeu cadastro foi realizado com sucesso!");*/
 
 		return novoCadastro;
 	}
