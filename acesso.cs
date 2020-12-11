@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 
 class Acesso {
-	private List<Cadastro> cadastros;
+	public List<Cadastro> cadastros;
 
 	public Acesso() {
 		cadastros = new List<Cadastro>();
+	}
+
+	public static List<Cadastro> getCadastros() {
+		return cadastros;
 	}
 
 	public void addCadastro(Cadastro c){
@@ -23,6 +27,7 @@ class Acesso {
 				if (e == cad.getEmail()) {
 					if (s == cad.getSenha()) {
 						return true;
+						break;
 					} else {
 						throw new ArgumentException("A senha digitada é incorreta. Tente novamente!");
 					}
@@ -39,5 +44,11 @@ class Acesso {
 
 		return false;
 	}
+
+	/*public static bool existeEmail(string e) {
+		foreach (Cadastro cad in getCadastros()) {
+		}
+		return false;
+	}*/
 
 }
